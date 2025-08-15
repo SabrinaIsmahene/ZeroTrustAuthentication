@@ -1,0 +1,262 @@
+[
+    {
+        "network": "sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 8263690
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 8263690
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 8263690
+            }
+        ]
+    },
+    {
+        "network": "ethereum",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 22424592
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 22424592
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 22424592
+            }
+        ]
+    },
+    {
+        "network": "arbitrum-sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 149903019
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 149903019
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 149903019
+            }
+        ]
+    },
+    {
+        "network": "optimism-sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 27341051
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 27341051
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 27341051
+            }
+        ]
+    },
+    {
+        "network": "matic-amoy",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 21308099
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 21308099
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 21308099
+            }
+        ]
+    },
+    {
+        "network": "arbitrum",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 333645515
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 333645515
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 333645515
+            }
+        ]
+    },
+    {
+        "network": "matic",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 71158898
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 71158898
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 71158898
+            }
+        ]
+    },
+    {
+        "network": "optimism",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 135443119
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 135443119
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 135443119
+            }
+        ]
+    },
+    {
+        "network": "base-sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 25358716
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 25358716
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 25358716
+            }
+        ]
+    },
+    {
+        "network": "linea-sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 12757656
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 12757656
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 12757656
+            }
+        ]
+    },
+    {
+        "network": "base",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 29848242
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 29848242
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 29848242
+            }
+        ]
+    },
+    {
+        "network": "linea",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 18707811
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 18707811
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 18707811
+            }
+        ]
+    },
+    {
+        "network": "scroll-sepolia",
+        "contracts": [
+            {
+                "name": "SemaphoreVerifier",
+                "address": "0x6C42599435B82121794D835263C846384869502d",
+                "startBlock": 9604960
+            },
+            {
+                "name": "PoseidonT3",
+                "address": "0xB43122Ecb241DD50062641f089876679fd06599a",
+                "startBlock": 9604960
+            },
+            {
+                "name": "Semaphore",
+                "address": "0x697c80d1F2654e88d52B16154929EB976568DB04",
+                "startBlock": 9604960
+            }
+        ]
+    }
+]

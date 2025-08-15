@@ -1,0 +1,122 @@
+name: production
+
+on:
+    push:
+        branches:
+            - main
+
+env:
+    TREE_DEPTH: 10
+
+jobs:
+    style:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Checkout du code
+            - uses: actions/checkout@v4
+
+            # Installer Node.js et Yarn
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            # Installer les dépendances avec Yarn
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
+
+            # Installer les types Node pour TypeScript
+            - name: Install Node types
+              run: yarn add -D @types/node
+
+            # Build des packages
+            - name: Build packages
+              run: yarn build
+
+            # Format avec Prettier
+            - name: Format
+              run: yarn format
+
+            # Lint avec ESLint
+            - name: Run ESLint
+              run: yarn lint
+
+    test-subgraph:
+        runs-on: ubuntu-22.04
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Build libraries
+              run: yarn build:libraries
+
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                type:
+                    - circuits
+                    - libraries
+                    - contracts
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install system dependencies
+              run: sudo apt-get update && sudo apt-get install -y wget g++ build-essential libgmp-dev nasm
+
+            - name: Setup Circom
+              if: matrix.type == 'circuits'
+              run: |
+                  wget https://github.com/iden3/circom/releases/download/v2.1.9/circom-linux-amd64 -O circom
+                  chmod +x circom
+                  sudo mv circom /usr/local/bin/
+
+            - name: Verify Circom
+              if: matrix.type == 'circuits'
+              run: circom --version
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Build libraries
+              run: yarn build:libraries
+
+            - name: Test libraries, contracts and circuits
+              run: yarn test:${{ matrix.type }}
+
+            - name: Coveralls
+              if: matrix.type != 'circuits'
+              uses: coverallsapp/github-action@master
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  flag-name: run-${{ matrix.type }}
+                  path-to-lcov: ./coverage/${{ matrix.type }}/lcov.info
+                  parallel: true
+
+    coverage:
+        runs-on: ubuntu-latest
+        needs: test
+
+        steps:
+            - name: Coveralls Finished
+              uses: coverallsapp/github-action@master
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  parallel-finished: true

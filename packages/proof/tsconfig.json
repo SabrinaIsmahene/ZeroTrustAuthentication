@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "typeRoots": ["./node_modules/@types", "./types"],
+        "types": ["node", "jest"]
+    },
+    "extends": "../../tsconfig.json",
+    "include": ["src", "tests", "rollup.node.config.ts", "rollup.browser.config.ts"]
+}
